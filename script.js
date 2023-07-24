@@ -63,21 +63,17 @@ const teamSection = document.getElementById("teamSection");
 
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-if(navigator.userAgent == "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36") {
-    console.log("yeeasdasdaseeet");
-    aboutTitle.innerText = navigator.userAgent;
+if(isAndroid) {
+    // gradient.style.bottom = '-170px';
 }
 
-gradient.style.bottom = '0px';
 
-gradient.style.bottom = aboutPage.getBoundingClientRect().scroll + 'px';
-
-console.log(aboutPage.getBoundingClientRect().y + " " + gradient.style.bottom);
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
+console.log("WOOSH" + gradient.style.top);
 
-// console.log(parseInt(aboutPage.getBoundingClientRect().y));
+console.log(parseInt(aboutPage.getBoundingClientRect().y));
 
 for(var i = 0; i < 15; i++){
     topOfSeperator.insertBefore(seperator[0].cloneNode(true), topOfSeperator.firstChild);
@@ -291,8 +287,11 @@ addEventListener("scroll", (event) => {
 
     if(scroll < 800 && scroll >= 0){
 
-       
+
         gradient.style.height = (scroll*2) + 'px';
+        gradient.style.bottom = "0px)";
+
+
 
         
         
