@@ -2,6 +2,7 @@ const navBarItems = document.getElementsByClassName("navBarItems");
 const hamBurgerButton = document.getElementById("hamburgerButton");
 const topRight = document.getElementById("topRight");
 const gradient = document.getElementById("gradient");
+const gradientHolder = document.getElementById("gradientHolder");
 const navBar = document.getElementById("navBar");
 const backImage = document.getElementById("backImage");
 
@@ -61,7 +62,8 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
-
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 for(var i = 0; i < 15; i++){
