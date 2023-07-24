@@ -61,6 +61,9 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
+
+
+
 for(var i = 0; i < 15; i++){
     topOfSeperator.insertBefore(seperator[0].cloneNode(true), topOfSeperator.firstChild);
 }
@@ -274,6 +277,7 @@ addEventListener("scroll", (event) => {
     if(scroll < 800 && scroll >= 0){
 
         gradient.style.height = (scroll*2) + 'px';
+        console.log(gradient.style.height);
         
     }
 
