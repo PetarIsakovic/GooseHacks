@@ -61,10 +61,10 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
-const ua = navigator.userAgent.toLowerCase()
-const isAndroid = ua.includes('android')
-
-if(isAndroid){
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+    console.log("yeeasdasdaseeet");
     gradient.style.bottom = '-250px';
 }
 
