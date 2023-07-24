@@ -61,11 +61,17 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
-var ua = navigator.userAgent.toLowerCase();
-var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-if(isAndroid) {
-    gradient.style.bottom = '-200px';
+  
+function GFG_Fun() {
+    var userAgent = navigator.userAgent.toLowerCase();
+    var Android = userAgent.indexOf("android") > -1;
+      
+    if(Android) {
+        gradient.style.bottom = '-50px';
+    }
 }
+
+GFG_Fun();
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
