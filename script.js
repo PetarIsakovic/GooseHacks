@@ -71,9 +71,7 @@ if(navigator.userAgent == "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36
 
 
 
-
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
-console.log("WOOSH" + gradient.style.top);
 
 console.log(parseInt(aboutPage.getBoundingClientRect().y));
 
