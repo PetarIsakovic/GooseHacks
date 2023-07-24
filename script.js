@@ -61,6 +61,12 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+    gradient.style.bottom = '-200px';
+}
+
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
 console.log("WOOSH" + gradient.style.top);
@@ -279,11 +285,9 @@ addEventListener("scroll", (event) => {
 
     if(scroll < 800 && scroll >= 0){
 
-        var ua = navigator.userAgent.toLowerCase();
-        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-        if(!isAndroid) {
-            gradient.style.height = (scroll*2) + 'px';
-        }
+       
+        gradient.style.height = (scroll*2) + 'px';
+
         
         
     }
