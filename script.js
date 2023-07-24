@@ -67,7 +67,7 @@ function GFG_Fun() {
     var Android = userAgent.indexOf("android") > -1;
       
     if(Android) {
-        gradient.style.bottom = '-50px';
+        gradient.style.bottom = '50px';
     }
 }
 
