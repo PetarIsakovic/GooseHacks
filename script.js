@@ -2,7 +2,6 @@ const navBarItems = document.getElementsByClassName("navBarItems");
 const hamBurgerButton = document.getElementById("hamburgerButton");
 const topRight = document.getElementById("topRight");
 const gradient = document.getElementById("gradient");
-const gradientHolder = document.getElementById("gradientHolder");
 const navBar = document.getElementById("navBar");
 const backImage = document.getElementById("backImage");
 
@@ -62,9 +61,11 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+// gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
+console.log("WOOSH" + gradient.style.top);
+
+console.log(parseInt(aboutPage.getBoundingClientRect().y));
 
 for(var i = 0; i < 15; i++){
     topOfSeperator.insertBefore(seperator[0].cloneNode(true), topOfSeperator.firstChild);
@@ -278,8 +279,12 @@ addEventListener("scroll", (event) => {
 
     if(scroll < 800 && scroll >= 0){
 
-        gradient.style.height = (scroll*2) + 'px';
-        console.log(gradient.style.height);
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if(!isAndroid) {
+            gradient.style.height = (scroll*2) + 'px';
+        }
+        
         
     }
 
