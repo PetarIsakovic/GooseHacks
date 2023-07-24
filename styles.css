@@ -55,7 +55,7 @@
 }
 
 #hiddenBug{
-	display: absolute;
+	position: absolute;
 	width: 100%;
 	height: 200px;
 	bottom: -200px;
