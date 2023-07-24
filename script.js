@@ -61,21 +61,13 @@ const teamSection = document.getElementById("teamSection");
 
 // const 
 
-  
-$iPhoneBrowser  = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
-$iPadBrowser    = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
-$AndroidBrowser = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
-$AndroidApp = $_SERVER['HTTP_X_REQUESTED_WITH'] == "com.company.app";
-$iOSApp = (strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile/') !== false) && (strpos($_SERVER['HTTP_USER_AGENT'], 'Safari/') == false);
+const ua = navigator.userAgent.toLowerCase()
+const isAndroid = ua.includes('android')
 
-if ($AndroidApp) {
-    console.log("woooo");
-    gradient.style.bottom = "-200px";
+if(isAndroid){
+    gradient.style.bottom = '-250px';
 }
-else if ($AndroidBrowser) {
-    console.log("woooo");
-    gradient.style.bottom = "-200px";
-}
+
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
