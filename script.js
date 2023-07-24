@@ -66,9 +66,9 @@ var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 if(navigator.userAgent == "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36") {
     console.log("yeeasdasdaseeet");
     aboutTitle.innerText = navigator.userAgent;
-    // gradient.style.bottom = '-250px';
 }
 
+gradient.style.bottom = '-250px';
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
