@@ -62,25 +62,20 @@ const teamSection = document.getElementById("teamSection");
 // const 
 
   
-var standalone = window.navigator.standalone,
-  userAgent = window.navigator.userAgent.toLowerCase(),
-  safari = /safari/.test(userAgent),
-  ios = /iphone|ipod|ipad/.test(userAgent);
+$iPhoneBrowser  = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
+$iPadBrowser    = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
+$AndroidBrowser = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
+$AndroidApp = $_SERVER['HTTP_X_REQUESTED_WITH'] == "com.company.app";
+$iOSApp = (strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile/') !== false) && (strpos($_SERVER['HTTP_USER_AGENT'], 'Safari/') == false);
 
-if (ios) {
-  if (!standalone && safari) {
-    // Safari
-  } else if (!standalone && !safari) {
-    // iOS webview
-  };
-} else {
-  if (userAgent.includes('wv')) {
-    gradient.style.bottom = '-100px';
-    console.log("yeet")
-  } else {
-    // Chrome
-  }
-};
+if ($AndroidApp) {
+    console.log("woooo");
+    gradient.style.bottom = "-200px";
+}
+else if ($AndroidBrowser) {
+    console.log("woooo");
+    gradient.style.bottom = "-200px";
+}
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
