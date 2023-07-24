@@ -68,7 +68,7 @@ if(navigator.userAgent == "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36
     aboutTitle.innerText = navigator.userAgent;
 }
 
-gradient.style.bottom = '-250px';
+gradient.style.bottom = '-170px';
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
