@@ -63,10 +63,11 @@ const teamSection = document.getElementById("teamSection");
 
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-if(navigator.userAgent == "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183") {
+if(navigator.userAgent == "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36") {
     console.log("yeeasdasdaseeet");
     gradient.style.bottom = '-250px';
 }
+
 
 
 
