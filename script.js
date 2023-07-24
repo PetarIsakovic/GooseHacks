@@ -62,16 +62,25 @@ const teamSection = document.getElementById("teamSection");
 // const 
 
   
-function GFG_Fun() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    var Android = userAgent.indexOf("android") > -1;
-      
-    if(Android) {
-        gradient.style.bottom = '50px';
-    }
-}
+var standalone = window.navigator.standalone,
+  userAgent = window.navigator.userAgent.toLowerCase(),
+  safari = /safari/.test(userAgent),
+  ios = /iphone|ipod|ipad/.test(userAgent);
 
-GFG_Fun();
+if (ios) {
+  if (!standalone && safari) {
+    // Safari
+  } else if (!standalone && !safari) {
+    // iOS webview
+  };
+} else {
+  if (userAgent.includes('wv')) {
+    gradient.style.bottom = '-100px';
+    console.log("yeet")
+  } else {
+    // Chrome
+  }
+};
 
 
 // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
