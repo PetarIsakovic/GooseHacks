@@ -329,7 +329,40 @@ for(var i = stikyNotes.length-1; i >=0; i--){
         }
     }
 
+    window.ontouchstart = e =>{
+        // get the class of element
+        var elementClass = e.target.className ;
+        // get parent in case player clicks on child
+        var parentClass = e.target.parentNode.className;
+
+        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+            continueMoving = 0;
+        }
+    }
+
     window.onmouseup = e => {
+        // get the class of element
+        var elementClass = e.target.className ;
+        // get parent in case player clicks on child
+        var parentClass = e.target.parentNode.className;
+
+        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+            continueMoving = 1;
+        }
+    }
+
+    window.ontouchmove = e =>{
+        // get the class of element
+        var elementClass = e.target.className ;
+        // get parent in case player clicks on child
+        var parentClass = e.target.parentNode.className;
+
+        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+            continueMoving = 1;
+        }
+    }
+
+    window.ontouchend = e =>{
         // get the class of element
         var elementClass = e.target.className ;
         // get parent in case player clicks on child
