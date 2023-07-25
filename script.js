@@ -315,65 +315,67 @@ addEventListener("scroll", (event) => {
 var continueMoving = 1;
 var holder = [];
 
+window.onmousedown = e => {
+    // get the class of element
+    var elementClass = e.target.className ;
+    // get parent in case player clicks on child
+    var parentClass = e.target.parentNode.className;
+
+    if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+        continueMoving = 0;
+    }
+}
+
+window.ontouchstart = e =>{
+    // get the class of element
+    var elementClass = e.target.className ;
+    // get parent in case player clicks on child
+    var parentClass = e.target.parentNode.className;
+
+    if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+        continueMoving = 0;
+    }
+    window.ontouchmove = e =>{
+        // get the class of element
+        var elementClass = e.target.className ;
+        // get parent in case player clicks on child
+        var parentClass = e.target.parentNode.className;
+
+        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+            continueMoving = 0;
+        }
+
+    }
+}
+
+
+
+window.onmouseup = e => {
+    // get the class of element
+    var elementClass = e.target.className ;
+    // get parent in case player clicks on child
+    var parentClass = e.target.parentNode.className;
+
+    if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+        continueMoving = 1;
+    }
+}
+
+window.ontouchend = e =>{
+    // get the class of element
+    var elementClass = e.target.className ;
+    // get parent in case player clicks on child
+    var parentClass = e.target.parentNode.className;
+
+    if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
+        continueMoving = 1;
+    }
+}
+
 for(var i = stikyNotes.length-1; i >=0; i--){
     holder.push(stikyNotes[i].cloneNode(true));
     // add a listener that checks if clicked for every sticky note
-    window.onmousedown = e => {
-        // get the class of element
-        var elementClass = e.target.className ;
-        // get parent in case player clicks on child
-        var parentClass = e.target.parentNode.className;
-
-        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
-            continueMoving = 0;
-        }
-    }
-
-    window.ontouchstart = e =>{
-        // get the class of element
-        var elementClass = e.target.className ;
-        // get parent in case player clicks on child
-        var parentClass = e.target.parentNode.className;
-
-        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
-            continueMoving = 0;
-        }
-        window.ontouchmove = e =>{
-            // get the class of element
-            var elementClass = e.target.className ;
-            // get parent in case player clicks on child
-            var parentClass = e.target.parentNode.className;
     
-            if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
-                continueMoving = 0;
-            }
-    
-        }
-    }
-
-    
-
-    window.onmouseup = e => {
-        // get the class of element
-        var elementClass = e.target.className ;
-        // get parent in case player clicks on child
-        var parentClass = e.target.parentNode.className;
-
-        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
-            continueMoving = 1;
-        }
-    }
-
-    window.ontouchend = e =>{
-        // get the class of element
-        var elementClass = e.target.className ;
-        // get parent in case player clicks on child
-        var parentClass = e.target.parentNode.className;
-
-        if(elementClass == "stikyNote" || parentClass == "stikyNote" || parentClass == "boxInfo"){
-            continueMoving = 1;
-        }
-    }
     stikyNotes[i].remove();
 }
 
