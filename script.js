@@ -272,12 +272,12 @@ addEventListener("scroll", (event) => {
 
 
 
-    if(!dropDownOn){
-        if(scroll/ 50 <= 0.97){
-        transparency = scroll/50;    
-        navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
-        }
-    }
+    // if(!dropDownOn){
+    //     if(scroll/ 50 <= 0.97){
+    //     transparency = scroll/50;    
+    //     navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
+    //     }
+    // }
 
     if(scroll < 800 && scroll >= 0){
 
@@ -554,8 +554,8 @@ function changeContent() {
         navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
     }
     else{
-        transparency = 0.36;
-        navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
+        transparency = 0.97;
+        navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.97)';
     }
     
 }
