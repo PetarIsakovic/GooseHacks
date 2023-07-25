@@ -59,13 +59,6 @@ const gooseHacks = document.getElementById("GooseHacks");
 
 const teamSection = document.getElementById("teamSection");
 
-// const 
-
-var ua = navigator.userAgent.toLowerCase();
-var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-if(isAndroid) {
-    // gradient.style.bottom = '-170px';
-}
 
 
 
@@ -228,15 +221,16 @@ else{
 
 // var scrollPosition = sessionStorage.getItem('scrollPosition');
 
+
 // change transparency of nav bar based on y scroll
-if(parseInt(window.scroll/50) <= 0.97){
-    transparency = window.scroll/50;
-    navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
-}
-else{
-    transparency = 0.36;
-    navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
-}
+// if(parseInt(window.scrollY/50) <= 0.97){
+//     transparency = window.scrollY/50;
+//     navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
+// }
+// else{
+//     transparency = 0.36;
+//     navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
+// }
 
 
 
@@ -554,6 +548,16 @@ function changeContent() {
         seperatorFaq = document.getElementsByClassName("seperatorFaq");
     }
     seperatorFaq[0].style.marginLeft = (parseInt(seperatorFaq[0].style.marginLeft)+1) + 'px';
+
+    if(parseInt(window.scrollY/50) <= 0.97){
+        transparency = window.scrollY/50;
+        navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
+    }
+    else{
+        transparency = 0.36;
+        navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
+    }
+    
 }
 
 setInterval(changeContent, 5);
