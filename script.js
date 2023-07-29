@@ -16,6 +16,8 @@ const homeButton2 = document.getElementById("home2");
 const faqsButton2 = document.getElementById("faqs2");
 // const sponsors2Button = document.getElementById("sponsors2");
 const teamButton2 = document.getElementById("team2");
+const devpostButton2 = document.getElementById("devpost2");
+
 
 
 var dropDownOn = false;
@@ -63,10 +65,10 @@ const teamSection = document.getElementById("teamSection");
 
 
 
-// gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
-console.log("WOOSH" + gradient.style.top);
+// // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
+// console.log("WOOSH" + gradient.style.top);
 
-console.log(parseInt(aboutPage.getBoundingClientRect().y));
+// console.log(parseInt(aboutPage.getBoundingClientRect().y));
 
 for(var i = 0; i < 15; i++){
     topOfSeperator.insertBefore(seperator[0].cloneNode(true), topOfSeperator.firstChild);
@@ -81,9 +83,6 @@ seperatorFaq = document.getElementsByClassName("seperatorFaq");
 
 seperator[0].style.marginLeft = '0px';
 seperatorFaq[0].style.marginLeft = '0px';
-
-
-
 
 
 
@@ -164,6 +163,11 @@ faqsButton2.addEventListener("click", function() {
         top: scrollPosition,
         behavior: 'smooth'
     });
+    dropDown.style.display = 'none';
+    navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
+});
+
+devpostButton2.addEventListener("click", function() {
     dropDown.style.display = 'none';
     navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
 });
@@ -549,13 +553,15 @@ function changeContent() {
     }
     seperatorFaq[0].style.marginLeft = (parseInt(seperatorFaq[0].style.marginLeft)+1) + 'px';
 
-    if(parseInt(window.scrollY/50) <= 0.97){
-        transparency = window.scrollY/50;
-        navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
-    }
-    else{
-        transparency = 0.97;
-        navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.97)';
+    if(dropDown.style.display != "flex"){
+        if(parseInt(window.scrollY/50) <= 0.97){
+            transparency = window.scrollY/50;
+            navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
+        }
+        else{
+            transparency = 0.97;
+            navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.97)';
+        }
     }
     
 }
