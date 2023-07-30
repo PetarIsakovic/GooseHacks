@@ -733,7 +733,7 @@ html, body {
 #topBarOfFaq{
 	margin-top: 35px;
 	width: 100%;
-	background-image: url("swoosh.png");
+	background-image: url("Images/swoosh.png");
 	/* border: 2px solid red; */
 	height: 340px;
 	overflow: hidden;
@@ -742,7 +742,7 @@ html, body {
 	background-color: rgba(255, 255, 255, 0);
 	
 	border: 10px solid rgb(64, 72, 193);
-	background-image: url("potential.gif");
+	background-image: url("Images/potential.gif");
 	border-left: transparent;
 }
 /* whatre u trying to do rn */
@@ -759,7 +759,7 @@ html, body {
 	overflow: hidden;
 	/* background-color: #00a6ff58; */
 	background-color: rgba(255, 255, 255, 0);
-	background-image: url("potential.gif");
+	background-image: url("Images/potential.gif");
 	border-left: transparent;
 }
 
@@ -767,7 +767,7 @@ html, body {
 	/* border: 2px solid orange; */
 	aspect-ratio: 1 / 1;
 	height: 100%;
-	background-image: url("stickNote.png");
+	background-image: url("Images/stickNote.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-top: 10px;
