@@ -16,7 +16,6 @@
 	cursor: pointer;
 }
 
-
 #logo:hover{
 	transform: scaleY(130%);
 	transform: scaleX(-110%);
