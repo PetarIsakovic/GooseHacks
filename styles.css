@@ -134,6 +134,15 @@
 	transform: scale(115%);
 }
 
+#titleButtons{
+	display: flex;
+	justify-content: center;
+}
+
+#discordButton{
+	margin-left: 10px;
+}
+
 @media only screen and (min-width: 601px) {
 	#home:hover{
 		background-color: rgba(191, 94, 255, 0.5);
@@ -243,6 +252,27 @@
 		background-color: rgb(0, 136, 255);
 	}
 
+	#discordButton{
+		font-family: Martel;
+		color: white;
+		font-size: 23px;
+		width: 150px;
+		height: 50px;
+		background-color: rgb(0, 136, 255);;
+		border-radius: 200px;
+		border-color: transparent;
+		transition: 0.3s;
+		cursor:pointer;
+	}
+	
+	#discordButton:hover{
+		background-color: #0066ff;
+	}
+	
+	#discordButton:active{
+		background-color: #936DE2;
+	}
+
 	#middleOfTitle{
 		margin-top: 50px;
 		display: flex;
@@ -321,6 +351,14 @@
 		-moz-background-clip: text;
 		-webkit-text-fill-color: transparent; 
 		-moz-text-fill-color: transparent;
+	}
+	
+	#discordButton:hover{
+		background-color: #0066ff;
+	}
+	
+	#discordButton:active{
+		background-color: #936DE2;
 	}
 	
 	#aboutInformationAbove{
@@ -435,6 +473,17 @@
 	
 	#register:active{
 		background-color: rgb(0, 136, 255);
+	}
+
+	#discordButton{
+		font-family: Martel;
+		color: white;
+		font-size: 15px;
+		background-color: rgb(0, 136, 255);;
+		border-radius: 200px;
+		border-color: transparent;
+		transition: 0.3s;
+		cursor:pointer;
 	}
 	
 	#middleOfTitle{
