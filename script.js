@@ -4,71 +4,40 @@ const topRight = document.getElementById("topRight");
 const gradient = document.getElementById("gradient");
 const navBar = document.getElementById("navBar");
 const backImage = document.getElementById("backImage");
-
 const homeButton = document.getElementById("home");
 const aboutButton = document.getElementById("about");
 const faqsButton = document.getElementById("faqs");
-// const sponsorsButton = document.getElementById("sponsors");
 const teamButton = document.getElementById("team");
-
 const aboutButton2 = document.getElementById("about2");
 const homeButton2 = document.getElementById("home2");
 const faqsButton2 = document.getElementById("faqs2");
-// const sponsors2Button = document.getElementById("sponsors2");
 const teamButton2 = document.getElementById("team2");
 const devpostButton2 = document.getElementById("devpost2");
-
-
-
-var dropDownOn = false;
-
-
 const hamburgerButton = document.getElementById("hamburgerButton");
 const dropDown = document.getElementById("menuOptions");
-
-
 const aboutPage = document.getElementById("information");
 const homePage = document.getElementById("backgroundImage");
 const faqPage = document.getElementById("faq");
-// const sponsorsPage = document.getElementById("Sponsors");
-
 const goose = document.getElementById("gooseBigLogo");
 const aboutInformationAbove = document.getElementById("aboutInformationAbove");
 const aboutInformationBelow = document.getElementById("aboutInformationBelow");
 const aboutTitle = document.getElementById("aboutTitle");
-
 var stikyNotes = document.getElementsByClassName("stikyNote");
-
 var stikyNoteLeft = stikyNotes[0];
-
 const topBarOfFaq = document.getElementById("topBarOfFaq");
 const bottomBarOfFaq = document.getElementById("bottomBarOfFaq");
-
 const topOfFaq = document.getElementById("topOfFaq");
-
 const gooseBigLogo = document.getElementById("gooseBigLogo");
 const register = document.getElementById("register");
-
 var seperator = document.getElementsByClassName("seperator");
 const topOfSeperator = document.getElementById("topOfSeperator");
-
 var seperatorFaq = document.getElementsByClassName("seperatorFaq");
 const topOfSeperatorFaq = document.getElementById("topOfSeperatorFaq");
-
-
 const logo = document.getElementById("logo")
 const gooseHacks = document.getElementById("GooseHacks");
-
 const teamSection = document.getElementById("teamSection");
 
-
-
-
-
-// // gradient.style.top = "(parseInt(aboutPage.getBoundingClientRect().y))";
-// console.log("WOOSH" + gradient.style.top);
-
-// console.log(parseInt(aboutPage.getBoundingClientRect().y));
+var dropDownOn = false;
 
 for(var i = 0; i < 15; i++){
     topOfSeperator.insertBefore(seperator[0].cloneNode(true), topOfSeperator.firstChild);
@@ -83,8 +52,6 @@ seperatorFaq = document.getElementsByClassName("seperatorFaq");
 
 seperator[0].style.marginLeft = '0px';
 seperatorFaq[0].style.marginLeft = '0px';
-
-
 
 hamburgerButton.addEventListener("click", function() {
     if(dropDown.style.display == "flex"){
@@ -101,13 +68,7 @@ hamburgerButton.addEventListener("click", function() {
     }
 });
 
-
-
-
-// navBar.style.backgroundColor = 'rgba(157, 3, 252, 0)';
-
 aboutButton.addEventListener("click", function() {
-    // aboutPage.scrollIntoView({behavior: 'smooth' });
     var scrollPosition = aboutPage.offsetTop - 125;
 
     window.scrollTo({
@@ -172,15 +133,6 @@ devpostButton2.addEventListener("click", function() {
     navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
 });
 
-// sponsorsButton.addEventListener("click", function() {
-//     sponsorsPage.scrollIntoView({ behavior: 'smooth' });
-// });
-// sponsors2Button.addEventListener("click", function() {
-//     sponsorsPage.scrollIntoView({ behavior: 'smooth' });
-//     dropDown.style.display = 'none';
-//     navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
-// });
-
 teamButton.addEventListener("click", function() {
     var scrollPosition = teamSection.offsetTop - 150;
 
@@ -188,7 +140,6 @@ teamButton.addEventListener("click", function() {
         top: scrollPosition,
         behavior: 'smooth'
     });
-    // teamSection.scrollIntoView({ behavior: 'smooth' });
 });
 teamButton2.addEventListener("click", function() {
     var scrollPosition = teamSection.offsetTop - 100;
@@ -205,8 +156,6 @@ var transparency = 0;
 
 menuOptions.style.display = 'none';
 
-
-// hamburger stuff
 if(window.innerWidth <= 896){
     for(let i = navBarItems.length-1; i >= 0; i--){
         navBarItems[i].style.display = 'none';
@@ -222,21 +171,6 @@ else{
     hamBurgerButton.style.display = 'none';
     topRight.style.justifyContent = 'space-evenly';
 }
-
-// var scrollPosition = sessionStorage.getItem('scrollPosition');
-
-
-// change transparency of nav bar based on y scroll
-// if(parseInt(window.scrollY/50) <= 0.97){
-//     transparency = window.scrollY/50;
-//     navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
-// }
-// else{
-//     transparency = 0.36;
-//     navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
-// }
-
-
 
 addEventListener("resize", (event) => {
 
@@ -261,10 +195,7 @@ addEventListener("resize", (event) => {
 addEventListener("scroll", (event) => {
 
     let scroll = this.scrollY;
-
-    // navBar.style.top = scroll + 'px';
     let scrollOffseted = scroll - 60;
-    //0-1
     goose.style.opacity = scroll/6 + '%' ;
     aboutTitle.style.opacity = scrollOffseted/6 + '%' ;
     aboutInformationAbove.style.opacity = scrollOffseted/6 + '%' ;
@@ -274,24 +205,11 @@ addEventListener("scroll", (event) => {
         backImage.style.scale = scroll/550 + 1;
     }
 
-
-
-    // if(!dropDownOn){
-    //     if(scroll/ 50 <= 0.97){
-    //     transparency = scroll/50;    
-    //     navBar.style.backgroundColor = 'rgba(157, 3, 252, ' + transparency + ')';
-    //     }
-    // }
-
     if(scroll < 800 && scroll >= 0){
 
 
         gradient.style.height = (scroll*2) + 'px';
         gradient.style.bottom = "0px)";
-
-
-
-        
         
     }
 
@@ -371,9 +289,7 @@ window.ontouchend = e =>{
 }
 
 for(var i = stikyNotes.length-1; i >=0; i--){
-    holder.push(stikyNotes[i].cloneNode(true));
-    // add a listener that checks if clicked for every sticky note
-    
+    holder.push(stikyNotes[i].cloneNode(true));    
     stikyNotes[i].remove();
 }
 
@@ -423,11 +339,6 @@ var pause = 0;
 
 function changeContent() {
     if(continueMoving > 0){
-    // if(Math.abs((sadRat.style.marginRight)) > parseInt(topBarOfFaq.offsetWidth)){
-    //     sadRat = document.getElementsByClassName("sadRat")[0];
-    // }
-
-    // if elements exists
 
     if(oldWidthOfScreen != topBarOfFaq.offsetWidth){
         oldWidthOfScreen = topBarOfFaq.offsetWidth;
@@ -453,24 +364,17 @@ function changeContent() {
 
 
     if(arrayTop.length > 0){
-       // console.log(arrayTop.length);
-
         // move the elements
         arrayTop[0].style.marginLeft = (parseInt(arrayTop[0].style.marginLeft)+1) +'px';
 
         
-        // sadRat.style.marginRight ='10px';
-
         var furtestLocation = parseInt(arrayTop[0].style.marginLeft) + (arrayTop.length*parseInt(arrayTop[0].offsetWidth) + (arrayTop.length-1)*marginBetween) - arrayTop[0].offsetWidth;
         // if the closest sticky note exceeds boundary
         if(arrayTop[arrayTop.length-1].getBoundingClientRect().x > topBarOfFaq.offsetWidth){
-            //console.log(arrayTop[arrayTop.length-1].getBoundingClientRect().y);
             // add element to bottom bar of Faq
-
             if(arrayTop.length == 1){
                 arrayTop[arrayTop.length-1].style.marginLeft = marginBetween + 'px';
             }
-
             var stikyNote = arrayTop[arrayTop.length-1].cloneNode(true);
             bottomBarOfFaq.appendChild(stikyNote);
             //add element to bottom
@@ -479,34 +383,18 @@ function changeContent() {
             if(arrayBottom.length == 1){
                 arrayBottom[0].style.marginLeft = bottomBarOfFaq.offsetWidth + 'px';
             }
-
-            
-            
-            // get rid of element from array and from scene
             
             arrayTop[arrayTop.length-1].remove();
             arrayTop.splice(arrayTop.length-1, 1);
 
-
-            // stikyNotes[stikyNotes.length-2].remove();
-            // stikyNotes = document.getElementsByClassName("stikyNote");
-            // stikyNoteLeft = stikyNotes[0];
-            // stikyNoteLeft.style.marginLeft = (-stikyNoteLeft.offsetWidth) + 'px';
-            // console.log(stikyNotes.length);
-            //console.log(stikyNotes[stikyNotes.length-1].getBoundingClientRect().y);
         }
     }
 
     if(arrayBottom.length > 0){
         arrayBottom[0].style.marginLeft = (parseInt(arrayBottom[0].style.marginLeft)-1) +'px';
     
-
-        // console.log(arrayBottom[0].getBoundingClientRect().x);
-
         if(arrayBottom[0].getBoundingClientRect().x + arrayBottom[0].offsetWidth < 0){
             var stikyNote = arrayBottom[0].cloneNode(true);
-            // stikyNote.style.marginLeft = '0px';
-            // stikyNote.style.marginRight = (-stikyNote.offsetWidth) + 'px';
             arrayTop.splice(0, 0, stikyNote);
             topBarOfFaq.insertBefore(stikyNote, topBarOfFaq.firstChild);
             arrayBottom[0].remove();
@@ -526,7 +414,6 @@ function changeContent() {
         seperator = document.getElementsByClassName("seperator");
         seperator[0].style.marginLeft =  '0px';
 
-        // console.log(seperator);
     }
 
     if(seperator[seperator.length-1].getBoundingClientRect().x > seperator[seperator.length-1].offsetWidth + topBarOfFaq.offsetWidth*5){
@@ -534,7 +421,6 @@ function changeContent() {
         seperator = document.getElementsByClassName("seperator");
     }
     seperator[0].style.marginLeft = (parseInt(seperator[0].style.marginLeft)+1) + 'px';
-/////
 
     if(seperatorFaq[0].getBoundingClientRect().x > -2500+seperatorFaq[0].offsetWidth){
         seperatorFaq[0].style.marginLeft = '0px'
@@ -544,7 +430,6 @@ function changeContent() {
         seperatorFaq = document.getElementsByClassName("seperatorFaq");
         seperatorFaq[0].style.marginLeft =  '0px';
 
-        // console.log(seperator);
     }
 
     if(seperatorFaq[seperatorFaq.length-1].getBoundingClientRect().x > seperatorFaq[seperatorFaq.length-1].offsetWidth + topBarOfFaq.offsetWidth*5){
