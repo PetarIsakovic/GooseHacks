@@ -655,6 +655,7 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	padding-bottom: 50px;
 }
 
 #faq{
@@ -744,24 +745,140 @@ html, body {
 	text-align: center;
 }
 
+#sponsorsSection{
+	width: 100%;
+    display: flex;
+	justify-content: center;
+	background-color: rgb(84, 26, 105);
+	padding-bottom: 100px;
+}
 
+.allSponsors{
+	height: 250px;
+	width: auto;
+	box-shadow: 0px 0px 1000px #00ff59;
+	border-image: linear-gradient(#0ba240, #3db081) 30;
+	border-width: 4px;
+	border-style: solid;
+
+}
+
+#sponsorsTitle{
+	width: 100%;
+    background-color: rgb(84, 26, 105);
+    text-align: center;
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 85px;
+    font-weight: bold;
+	padding-bottom: 60px;
+	padding-top: 0px;
+	margin: 0px;
+}
+
+@media only screen and (max-width: 690px) {
+	#sponsorsTitle{
+		font-size: 65px;
+		padding-bottom: 20px;
+	}
+	#sponsorsSection{
+		padding-bottom: 80px;
+	}
+
+	.allSponsors{
+		box-shadow: 0px 0px 85px #00ff59;
+	}
+
+}
+
+@media only screen and (max-width: 515px) {
+	.allSponsors{
+		height: 200px;
+		width: auto;
+		box-shadow: 0px 0px 55px #00ff59;
+		
+	}
+}
+
+@media only screen and (max-width: 515px) {
+	#sponsorsTitle{
+		font-size: 45px;
+		padding-bottom: 10px;
+	}
+	#sponsorsSection{
+		padding-bottom: 40px;
+	}
+
+	.allSponsors{
+		height: 160px;
+		width: auto;
+		box-shadow: 0px 0px 40px #00ff59;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#sponsorsTitle{
+		font-size: 35px;
+		padding-bottom: 5px;
+	}
+	#sponsorsSection{
+		padding-bottom: 30px;
+	}
+	.allSponsors{
+		height: 100px;
+		width: auto;
+		box-shadow: 0px 0px 20px #00ff59;
+	}
+}
+
+.custom-shape-divider-top-1690928188{
+	fill:rgb(84, 26, 105)
+}
+
+#waveSection{
+	background-color: #370063;
+}
 
 #teamSection{
     width: 100%;
-    background-color: #541a69;
     display: flex;
     flex-direction: column;
     align-items: center;
+	background-color: #370063;
 }
 
 #teamTitle{
-	margin-top: 60px;
+	margin-top: 50px;
     color: white;
     font-size: 45px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     text-align: center;
 
+}
+
+@media only screen and (max-width: 690px) {
+	#teamTitle{
+		font-size: 40px;
+	}
+}
+
+@media only screen and (max-width: 515px) {
+	#teamTitle{
+		font-size: 35px;
+	}
+}
+
+@media only screen and (max-width: 515px) {
+	#teamTitle{
+		font-size: 30px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#teamTitle{
+		font-size: 25px;
+	}
 }
 
 #gooseHacksText{
@@ -948,3 +1065,4 @@ html, body {
 	width: 100%;
 	height: 50px;
 }
+

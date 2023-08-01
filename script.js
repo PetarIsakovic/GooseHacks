@@ -8,10 +8,12 @@ const homeButton = document.getElementById("home");
 const aboutButton = document.getElementById("about");
 const faqsButton = document.getElementById("faqs");
 const teamButton = document.getElementById("team");
+const sponsorsButton = document.getElementById("sponsors");
 const aboutButton2 = document.getElementById("about2");
 const homeButton2 = document.getElementById("home2");
 const faqsButton2 = document.getElementById("faqs2");
 const teamButton2 = document.getElementById("team2");
+const sponsorsButton2 = document.getElementById("sponsors2");
 const devpostButton2 = document.getElementById("devpost2");
 const hamburgerButton = document.getElementById("hamburgerButton");
 const dropDown = document.getElementById("menuOptions");
@@ -36,6 +38,7 @@ const topOfSeperatorFaq = document.getElementById("topOfSeperatorFaq");
 const logo = document.getElementById("logo")
 const gooseHacks = document.getElementById("GooseHacks");
 const teamSection = document.getElementById("teamSection");
+const sponsorsTitle = document.getElementById("sponsorsTitle");
 
 var dropDownOn = false;
 
@@ -134,7 +137,7 @@ devpostButton2.addEventListener("click", function() {
 });
 
 teamButton.addEventListener("click", function() {
-    var scrollPosition = teamSection.offsetTop - 150;
+    var scrollPosition = teamSection.offsetTop - 80;
 
     window.scrollTo({
         top: scrollPosition,
@@ -142,7 +145,25 @@ teamButton.addEventListener("click", function() {
     });
 });
 teamButton2.addEventListener("click", function() {
-    var scrollPosition = teamSection.offsetTop - 100;
+    var scrollPosition = teamSection.offsetTop - 80;
+
+    window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+    });    dropDown.style.display = 'none';
+    navBar.style.backgroundColor = 'rgba(157, 3, 252, 0.36)';
+});
+
+sponsorsButton.addEventListener("click", function() {
+    var scrollPosition = sponsorsTitle.offsetTop - 120;
+
+    window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+    });
+});
+sponsorsButton2.addEventListener("click", function() {
+    var scrollPosition = sponsorsTitle.offsetTop - 120;
 
     window.scrollTo({
         top: scrollPosition,
