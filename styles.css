@@ -760,7 +760,7 @@ html, body {
 .allSponsors{
 	height: 250px;
 	width: auto;
-	box-shadow: 0px 0px 1000px #00ff59;
+	box-shadow: 0px 0px 100px #00ff59;
 	border-image: linear-gradient(#0ba240, #3db081) 30;
 	border-width: 4px;
 	border-style: solid;
