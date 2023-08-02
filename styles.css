@@ -848,7 +848,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-	background-color: #370063;
+	background-color: rgb(84, 26, 105);
 }
 
 #teamTitle{
