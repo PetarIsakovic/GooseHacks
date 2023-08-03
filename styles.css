@@ -915,17 +915,25 @@ html, body {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 80px;
 }
 
-#profile{
+#otherProfilesSection{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.profile{
 	width: 250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 30px;
 }
 
-#profilePicture{
+
+.profilePicture{
 	border-radius: 50%;
 	border: 2px rgb(85, 85, 255) solid;
 	width: 230px;
@@ -933,7 +941,15 @@ html, body {
 	margin-right: 0px;
 }
 
-#contributerName{
+.profilePicture2{
+	border-radius: 50%;
+	border: 2px rgb(85, 85, 255) solid;
+	width: 180px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.contributerName{
 	font-family: 'Courier New', Courier, monospace;
 	color: white;
 	font-size: 23px;
@@ -943,9 +959,9 @@ html, body {
 	margin-right: 0px;
 }
 
-#contributerTitle{
+.contributerTitle{
 	font-family: 'Courier New', Courier, monospace;
-	color: rgb(108, 108, 255);
+	color: rgb(69, 253, 118);
 	font-size: 19px;
 	text-align: center;
 	margin-top: 0px;
@@ -953,12 +969,61 @@ html, body {
 	margin-right: 0px;
 }
 
-#credentials{
+.contributerTitleJudge{
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(108, 199, 255);
+	font-size: 19px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.credentials{
 	display: flex;
 	justify-content: space-evenly;
 	margin-left: 0px;
 	margin-right: 0px;
 	width: 100%;
+}
+
+.contributerName2{
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.contributerTitle2{
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(69, 253, 118);
+	font-size: 16px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.contributerTitleJudge2{
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(108, 199, 255);
+	font-size: 17px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.credentials2{
+	margin-top: -10px;
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 45%;
 }
 
 #linkedIn{
@@ -975,9 +1040,14 @@ html, body {
 		flex-direction: column;
 		align-items: center;
 	}
-	#profile{
+	#otherProfilesSection{
+		flex-direction: column;
+		align-items: center;
+	}
+	.profile{
 		margin-top: 25px;
 	}
+
 }
 
 #endOfWebsite{
