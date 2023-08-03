@@ -922,6 +922,7 @@ html, body {
 	justify-content: center;
 	width: 100%;
 	margin-bottom: 30px;
+	flex-wrap: wrap;
 }
 
 .profile{
@@ -972,7 +973,17 @@ html, body {
 .contributerTitleJudge{
 	font-family: 'Courier New', Courier, monospace;
 	color: rgb(108, 199, 255);
-	font-size: 19px;
+	font-size: 17px;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.contributerTitleMentor{
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(206, 255, 108);
+	font-size: 17px;
 	text-align: center;
 	margin-top: 0px;
 	margin-left: 0px;
@@ -1001,16 +1012,6 @@ html, body {
 	font-family: 'Courier New', Courier, monospace;
 	color: rgb(69, 253, 118);
 	font-size: 16px;
-	text-align: center;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-.contributerTitleJudge2{
-	font-family: 'Courier New', Courier, monospace;
-	color: rgb(108, 199, 255);
-	font-size: 17px;
 	text-align: center;
 	margin-top: 0px;
 	margin-left: 0px;
