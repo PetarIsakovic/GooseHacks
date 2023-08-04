@@ -760,11 +760,6 @@ html, body {
 .allSponsors{
 	height: 250px;
 	width: auto;
-	box-shadow: 0px 0px 100px #00ff59;
-	border-image: linear-gradient(#0ba240, #3db081) 30;
-	border-width: 4px;
-	border-style: solid;
-
 }
 
 #sponsorsTitle{
@@ -789,18 +784,13 @@ html, body {
 		padding-bottom: 80px;
 	}
 
-	.allSponsors{
-		box-shadow: 0px 0px 85px #00ff59;
-	}
 
 }
 
 @media only screen and (max-width: 515px) {
 	.allSponsors{
 		height: 200px;
-		width: auto;
-		box-shadow: 0px 0px 55px #00ff59;
-		
+		width: auto;		
 	}
 }
 
@@ -816,7 +806,6 @@ html, body {
 	.allSponsors{
 		height: 160px;
 		width: auto;
-		box-shadow: 0px 0px 40px #00ff59;
 	}
 }
 
@@ -831,7 +820,6 @@ html, body {
 	.allSponsors{
 		height: 100px;
 		width: auto;
-		box-shadow: 0px 0px 20px #00ff59;
 	}
 }
 
@@ -848,7 +836,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-	background-color: rgb(84, 26, 105);
+	background-color: #370063;
 }
 
 #teamTitle{
