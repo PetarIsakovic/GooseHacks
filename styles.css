@@ -788,14 +788,14 @@ html, body {
 
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 950px) {
 	.allSponsors{
 		height: 100px;
 		width: auto;		
 	}
 }
 
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 670px) {
 	#sponsorsTitle{
 		font-size: 45px;
 		padding-bottom: 10px;
@@ -810,7 +810,7 @@ html, body {
 	}
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 415px) {
 	#sponsorsTitle{
 		font-size: 35px;
 		padding-bottom: 5px;
@@ -820,6 +820,20 @@ html, body {
 	}
 	.allSponsors{
 		height: 50px;
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 377px) {
+	#sponsorsTitle{
+		font-size: 35px;
+		padding-bottom: 5px;
+	}
+	#sponsorsSection{
+		padding-bottom: 30px;
+	}
+	.allSponsors{
+		height: 40px;
 		width: auto;
 	}
 }
