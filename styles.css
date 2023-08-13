@@ -949,6 +949,7 @@ html, body {
 	border-radius: 50%;
 	border: 2px rgb(85, 85, 255) solid;
 	width: 180px;
+	height: 180px;
 	margin-left: 0px;
 	margin-right: 0px;
 }
