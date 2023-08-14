@@ -481,3 +481,33 @@ gooseBigLogo.addEventListener('mousedown', function(){
 gooseBigLogo.addEventListener('mouseup', function(){
     gooseBigLogo.style.transform = 'scale(100%)';
 });
+
+let countDown = document.getElementById("countDownDate");
+var countDownDate = new Date("Aug 24, 2023 22:00:00").getTime();
+
+function countDownUpdate(interval){
+    let now = new Date().getTime();
+
+    let distance = countDownDate - now;
+  
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    countDown.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  
+    if (distance < 0) {
+      clearInterval(interval);
+      countDown.innerHTML = "Hackathon Has Begun";
+    }
+  
+}
+
+countDownUpdate();
+
+let interval = setInterval(function() {
+    countDownUpdate(interval);
+}, 1000);
+
+

@@ -215,7 +215,14 @@
 	}
 }
 
-
+#countDownDate{
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 300;
+	text-shadow: 0px 0px 22px #ffffff;
+	font-size: 50px;
+	text-align: center;
+}
 
 
 @media only screen and (min-width: 601px) {
@@ -277,7 +284,7 @@
 	}
 
 	#middleOfTitle{
-		margin-top: 50px;
+		margin-top: 130px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -451,6 +458,10 @@
 		color: white;
 		margin-bottom: 25px;
 	}
+
+	#countDownDate{
+		font-size: 40px;
+	}
 	
 	#moto{
 		font-family: Martel;
@@ -584,6 +595,13 @@
 		object-fit: cover;
 		opacity: 0;
 	}
+}
+
+@media only screen and (max-width: 410px) {
+	#countDownDate{
+		font-size: 30px;
+	}
+	
 }
 
 #topRight{
@@ -758,7 +776,7 @@ html, body {
 }
 
 .allSponsors{
-	height: 150px;
+	height: 100px;
 	width: auto;
 	margin: 20px;
 }
@@ -790,7 +808,8 @@ html, body {
 
 @media only screen and (max-width: 950px) {
 	.allSponsors{
-		height: 100px;
+		height: 80px;
+		margin: 18px;
 		width: auto;		
 	}
 }
@@ -806,6 +825,7 @@ html, body {
 
 	.allSponsors{
 		height: 60px;
+		margin: 15px;
 		width: auto;
 	}
 }
@@ -820,6 +840,7 @@ html, body {
 	}
 	.allSponsors{
 		height: 50px;
+		margin: 10px;
 		width: auto;
 	}
 }
@@ -834,6 +855,7 @@ html, body {
 	}
 	.allSponsors{
 		height: 40px;
+		margin: 5px;
 		width: auto;
 	}
 }
