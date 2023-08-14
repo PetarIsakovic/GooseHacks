@@ -47,7 +47,7 @@
 #hiddenBug{
 	position: absolute;
 	width: 100%;
-	height: 200px;
+	height: 220px;
 	bottom: -200px;
 	background-color: rgb(84, 26, 105);
 }
