@@ -301,9 +301,7 @@ addEventListener("scroll", (event) => {
         prizePool.style.opacity = 0;
         if(prize >= 39999){
             counting = false;
-            console.log("refresh");
         }
-        console.log(prize);
     }
     else if(counting){
         prizePool.style.opacity = 1;
@@ -577,7 +575,7 @@ gooseBigLogo.addEventListener('mouseup', function(){
 });
 
 let countDown = document.getElementById("countDownDate");
-var countDownDate = new Date("Aug 24, 2023 22:00:00").getTime();
+var countDownDate = new Date("Aug 24, 2023 22:00:00 EST+00:00").getTime();
 
 function countDownUpdate(interval){
     let now = new Date().getTime();
