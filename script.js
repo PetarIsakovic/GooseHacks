@@ -575,7 +575,7 @@ gooseBigLogo.addEventListener('mouseup', function(){
 });
 
 let countDown = document.getElementById("countDownDate");
-var countDownDate = new Date("Aug 24, 2023 22:00:00 EST").getTime();
+var countDownDate = new Date("Aug 24, 2023 21:00:00 EST").getTime();
 
 function countDownUpdate(interval){
     let now = new Date().getTime();
