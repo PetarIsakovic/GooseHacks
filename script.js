@@ -38,7 +38,12 @@ const topOfSeperatorFaq = document.getElementById("topOfSeperatorFaq");
 const logo = document.getElementById("logo")
 const gooseHacks = document.getElementById("GooseHacks");
 const teamSection = document.getElementById("teamSection");
-// const sponsorsTitle = document.getElementById("sponsorsTitle");
+const prizeAmount = document.getElementById("prizeAmount");
+const prizePool = document.getElementById("prizePool");
+const speaker = document.getElementById("speaker");
+const speakerTitle = document.getElementsByClassName("speakerTitle")[0];
+const infoSectionSpeaker = document.getElementById("infoSectionSpeaker");
+const speakerProfileImage = document.getElementsByClassName("speakerProfileImage")[0];
 
 var dropDownOn = false;
 
@@ -213,9 +218,98 @@ addEventListener("resize", (event) => {
     }
 });
 
-addEventListener("scroll", (event) => {
+let counting = false;
+let prize = 0.00;
 
+function countingEffect(){
+    counting = true;
+    prize = 0.00;
+    let speed = 0;
+    prizePool.style.opacity = 1;
+    
+    let intevalCounter = setInterval(function(){
+        prizeAmount.innerHTML = "$" + prize.toFixed(2);
+    
+            if(prize < 40000){
+                prize+=0.01;
+            }
+            else{
+                clearInterval(intevalCounter);
+            }
+            if(prize < 39998){
+                prize+=0.10;
+            }
+            if(prize < 39996){
+                prize+=1;
+            }
+            if(prize > 100){
+                if(prize < 39800){
+                    prize+=10;
+                }
+            }
+            if(prize > 1000){
+                if(prize < 39000){
+                    prize+=100;
+                }
+            }
+            if(prize > 10000){
+                if(prize < 30000){
+                    prize+=3000;
+                }
+            }
+    }, 1);
+
+}
+
+if(prizeAmount.offsetTop-550 < scrollY && !counting){
+    countingEffect();
+}
+
+if(speakerTitle.offsetTop-600 < scrollY){
+    speakerTitle.style.transform = "translateX(0px)";
+    infoSectionSpeaker.style.transform = "translateX(0px)";
+    speakerProfileImage.style.transform = "translateX(0px)";
+    speaker.style.opacity = "1";
+}
+else{
+    speakerTitle.style.transform = "translateX(100%)";
+    infoSectionSpeaker.style.transform = "translateX(1000px)";
+    speakerProfileImage.style.transform = "translateX(-1000px)";
+    speaker.style.opacity = "0";
+}
+
+addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
+
+    if(speakerTitle.offsetTop-600 < scroll){
+        speakerTitle.style.transform = "translateX(0px)";
+        infoSectionSpeaker.style.transform = "translateX(0px)";
+        speakerProfileImage.style.transform = "translateX(0px)";
+        speaker.style.opacity = "1";
+    }
+    else{
+        speakerTitle.style.transform = "translateX(100%)";
+        infoSectionSpeaker.style.transform = "translateX(1000px)";
+        speakerProfileImage.style.transform = "translateX(-1000px)";
+        speaker.style.opacity = "0";
+    }
+
+    if(prizeAmount.offsetTop-550 < scroll && !counting){
+        countingEffect();
+    }
+    else if(prizeAmount.offsetTop-550 >= scroll){
+        prizePool.style.opacity = 0;
+        if(prize >= 39999){
+            counting = false;
+            console.log("refresh");
+        }
+        console.log(prize);
+    }
+    else if(counting){
+        prizePool.style.opacity = 1;
+    }
+
+
     let scrollOffseted = scroll - 60;
     goose.style.opacity = scroll/6 + '%' ;
     aboutTitle.style.opacity = scrollOffseted/6 + '%' ;
@@ -509,5 +603,3 @@ countDownUpdate();
 let interval = setInterval(function() {
     countDownUpdate(interval);
 }, 1000);
-
-
