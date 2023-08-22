@@ -808,7 +808,29 @@ html, body {
 		padding-bottom: 80px;
 	}
 
+	.toyota{
+		height: 160px;
+	}
 
+
+}
+
+@media only screen and (max-width: 560px) {
+	.toyota{
+		height: 130px;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.toyota{
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 370px) {
+	.toyota{
+		height: 80px;
+	}
 }
 
 @media only screen and (max-width: 950px) {
