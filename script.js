@@ -230,7 +230,7 @@ function countingEffect(){
     let intevalCounter = setInterval(function(){
         prizeAmount.innerHTML = "$" + prize.toFixed(2);
     
-            if(prize < 70000){
+            if(prize < 70000.00){
                 prize+=0.01;
             }
             else{

@@ -780,6 +780,12 @@ html, body {
 	margin: 20px;
 }
 
+.toyota{
+	height: 200px;
+	width: auto;
+	margin: 20px;
+}
+
 #sponsorsTitle{
 	width: 100%;
     background-color: rgb(84, 26, 105);
@@ -788,7 +794,7 @@ html, body {
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 85px;
     font-weight: bold;
-	padding-bottom: 60px;
+	padding-bottom: 20px;
 	padding-top: 0px;
 	margin: 0px;
 }
@@ -1422,4 +1428,11 @@ html, body {
 		font-size: 40px;
 		margin: 0px;
 	}
+}
+
+#bigSponsors{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
