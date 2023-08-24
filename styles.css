@@ -780,7 +780,7 @@ html, body {
 	margin: 20px;
 }
 
-.toyota{
+.hugeSponsors{
 	height: 200px;
 	width: auto;
 	margin: 20px;
@@ -808,7 +808,7 @@ html, body {
 		padding-bottom: 80px;
 	}
 
-	.toyota{
+	.hugeSponsors{
 		height: 160px;
 	}
 
@@ -816,19 +816,19 @@ html, body {
 }
 
 @media only screen and (max-width: 560px) {
-	.toyota{
+	.hugeSponsors{
 		height: 130px;
 	}
 }
 
 @media only screen and (max-width: 470px) {
-	.toyota{
+	.hugeSponsors{
 		height: 100px;
 	}
 }
 
 @media only screen and (max-width: 370px) {
-	.toyota{
+	.hugeSponsors{
 		height: 80px;
 	}
 }
