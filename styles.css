@@ -1411,7 +1411,7 @@ html, body {
 	margin: 0px;
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 965px) {
 	#prizeAmount{
 		font-size: 150px;
 	}
@@ -1421,7 +1421,7 @@ html, body {
 	}
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 730px) {
 	#prizeAmount{
 		font-size: 100px;
 	}
@@ -1431,12 +1431,22 @@ html, body {
 	}
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 490px) {
 	#prizeAmount{
 		font-size: 70px;
 	}
 	#prizeTitle{
 		font-size: 40px;
+		margin: 0px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#prizeAmount{
+		font-size: 60px;
+	}
+	#prizeTitle{
+		font-size: 35px;
 		margin: 0px;
 	}
 }

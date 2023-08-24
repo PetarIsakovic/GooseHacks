@@ -230,31 +230,31 @@ function countingEffect(){
     let intevalCounter = setInterval(function(){
         prizeAmount.innerHTML = "$" + prize.toFixed(2);
     
-            if(prize < 70000.00){
+            if(prize < 100000.00){
                 prize+=0.01;
             }
             else{
-                prize = 70000.00;
+                prize = 100000.00;
                 prizeAmount.innerHTML = "$" + prize.toFixed(2);
                 clearInterval(intevalCounter);
             }
-            if(prize < 69998){
+            if(prize < 99998){
                 prize+=0.10;
             }
-            if(prize < 69996){
+            if(prize < 99996){
                 prize+=1;
             }
             if(prize > 100){
-                if(prize < 69800){
+                if(prize < 99800){
                     prize+=10;
                 }
             }
             if(prize > 1000){
-                if(prize < 69000){
+                if(prize < 99000){
                     prize+=100;
                 }
             }
-            if(prize > 10000){
+            if(prize > 30000){
                 if(prize < 60000){
                     prize+=4000;
                 }
