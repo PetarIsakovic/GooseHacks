@@ -593,7 +593,7 @@ function countDownUpdate(interval){
   
     if (distance < 0) {
       clearInterval(interval);
-      countDown.innerHTML = "Hackathon Has Begun";
+      countDown.innerHTML = "Hackathon Has Ended";
     }
   
 }
